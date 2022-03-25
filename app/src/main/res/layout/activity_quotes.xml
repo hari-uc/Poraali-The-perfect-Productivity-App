@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuotesActivity.QuotesActivity"
+
+    android:background="@color/bg_color_2">
+
+
+    <LinearLayout
+        android:id="@+id/linearablove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".QuotesActivity.QuotesActivity"
+        android:layout_centerHorizontal="true"
+        android:background="@color/bg_color_2">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="50dp"
+            android:layout_weight="5">
+
+            <RadioButton
+
+                android:id="@+id/englishbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:tag="1"
+                android:text="ENGLISH"
+                android:textColor="@drawable/text_color" />
+
+
+            <RadioButton
+
+                android:id="@+id/tamilbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/radio_selector"
+                android:button="@android:color/transparent"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:tag="1"
+                android:text="TAMIL"
+                android:textColor="@drawable/text_color" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearablove">
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

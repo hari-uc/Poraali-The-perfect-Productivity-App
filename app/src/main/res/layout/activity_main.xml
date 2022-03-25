@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_2">
+
+
+    <!--    android:background="#CCFF0000"-->
+
+    <TextView
+
+        android:id="@+id/textView"
+        android:layout_width="359dp"
+        android:layout_height="52dp"
+
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Hello Hari👋"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/button1"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/neumorphButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.757"
+        app:neumorph_backgroundColor="@color/bg_color_2"
+        app:neumorph_shadowColorDark="#0E1013"
+        app:neumorph_shadowColorLight="#32343A"
+        app:neumorph_strokeColor="#3C414C" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/neumorphButton2"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:neumorph_backgroundColor="@color/bg_color_2"
+        app:neumorph_shadowColorDark="#0E1013"
+        app:neumorph_shadowColorLight="#32343A"
+        app:neumorph_strokeColor="#3C414C" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/button2"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/neumorphButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintVertical_bias="0.0"
+        app:neumorph_backgroundColor="@color/bg_color_2"
+        app:neumorph_shadowColorDark="#0E1013"
+        app:neumorph_shadowColorLight="#32343A"
+        app:neumorph_strokeColor="#3C414C" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/neumorphButton4"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="@+id/neumorphButton2"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintVertical_bias="1.0"
+        app:neumorph_backgroundColor="@color/bg_color_2"
+        app:neumorph_shadowColorDark="#0E1013"
+        app:neumorph_shadowColorLight="#32343A"
+        app:neumorph_strokeColor="#3C414C" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
