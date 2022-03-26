@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_add_button.xml" value="0.1295" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_done_button.xml" value="0.1095" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_note.xml" value="0.115" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_search.xml" value="0.1295" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_splash.xml" value="0.2265" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_subtitle_indicator.xml" value="0.115" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/radio_selector.xml" value="0.249" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/rounded_corner.xml" value="0.2265" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/text_color.xml" value="0.249" />
-        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_create_note.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_create_note.xml" value="0.136" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_focus_mode.xml" value="0.2" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_notes.xml" value="0.25416666666666665" />
@@ -23,6 +24,7 @@
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/activity_todo.xml" value="0.176" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_english_quote.xml" value="0.2" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_tamil_quotes.xml" value="0.1" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/item_container_note.xml" value="0.152" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/new_task.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/todo_row_template.xml" value="0.22780797101449277" />
       </map>
