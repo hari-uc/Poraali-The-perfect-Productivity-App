@@ -109,6 +109,67 @@
                 app:layout_constraintBottom_toBottomOf="@id/inputnotesubtitle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/inputnotesubtitle"/>
+            
+            <ImageView
+                android:id="@+id/imagenote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="poraali"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/inputnotesubtitle"/>
+
+            <ImageView
+                android:id="@+id/imageremoveImage"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/background_delete"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/icdelete"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/imagenote"
+                app:layout_constraintTop_toTopOf="@id/imagenote"/>
+
+            <LinearLayout
+                android:id="@+id/layoutweburl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/imagenote"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/textweburl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:fontFamily="@font/ubunturegular"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_13ssp"/>
+
+
+                <ImageView
+                    android:id="@+id/imageremoveweburl"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/icdelete"
+                    android:tint="@color/colorDelete"/>
+
+
+            </LinearLayout>
+
 
 
             <EditText
@@ -131,7 +192,7 @@
                 android:textColorHint="@color/colortextmint"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/inputnotesubtitle"/>
+                app:layout_constraintTop_toBottomOf="@id/layoutweburl"/>
 
 
 

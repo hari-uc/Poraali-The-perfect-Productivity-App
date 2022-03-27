@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_add_button.xml" value="0.1295" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_delete.xml" value="0.115" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_dialog.xml" value="0.115" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_done_button.xml" value="0.1095" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_miscellaneous.xml" value="0.115" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/drawable/background_note.xml" value="0.115" />
@@ -31,6 +33,8 @@
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_english_quote.xml" value="0.2" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/fragment_tamil_quotes.xml" value="0.1" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/item_container_note.xml" value="0.152" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/layout_add_url.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/layout_delete_note.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/layout_miscellaneous.xml" value="0.176" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/new_task.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/todo_row_template.xml" value="0.22780797101449277" />
