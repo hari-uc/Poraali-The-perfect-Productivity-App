@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color_2"
     tools:context=".Activities.CreateNoteActivity">
-    
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="675dp"
         android:layout_marginBottom="@dimen/_40sdp"
         android:clipToPadding="false"
         android:paddingBottom="@dimen/_10sdp">
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true">
-            
+
             <ImageView
                 android:id="@+id/imageback"
                 android:layout_width="@dimen/_20sdp"
@@ -29,7 +29,7 @@
                 android:src="@drawable/ic_leftarrow"
                 android:tint="@color/coloricon"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imagesave"
@@ -42,7 +42,7 @@
                 android:tint="@color/coloricon"
                 app:layout_constraintBottom_toBottomOf="@+id/imageback"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageback"/>
+                app:layout_constraintTop_toTopOf="@+id/imageback" />
 
             <EditText
                 android:id="@+id/inputnotetitle"
@@ -61,7 +61,7 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/colortextmint"
                 android:textSize="@dimen/_16ssp"
-                app:layout_constraintTop_toBottomOf="@+id/imageback"/>
+                app:layout_constraintTop_toBottomOf="@+id/imageback" />
 
             <TextView
                 android:id="@+id/textdatetime"
@@ -108,8 +108,8 @@
                 android:background="@drawable/background_subtitle_indicator"
                 app:layout_constraintBottom_toBottomOf="@id/inputnotesubtitle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/inputnotesubtitle"/>
-            
+                app:layout_constraintTop_toTopOf="@id/inputnotesubtitle" />
+
             <ImageView
                 android:id="@+id/imagenote"
                 android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="poraali"
                 android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@id/inputnotesubtitle"/>
+                app:layout_constraintTop_toBottomOf="@id/inputnotesubtitle" />
 
             <ImageView
                 android:id="@+id/imageremoveImage"
@@ -134,7 +134,7 @@
                 android:tint="@color/white"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="@id/imagenote"
-                app:layout_constraintTop_toTopOf="@id/imagenote"/>
+                app:layout_constraintTop_toTopOf="@id/imagenote" />
 
             <LinearLayout
                 android:id="@+id/layoutweburl"
@@ -157,7 +157,7 @@
                     android:autoLink="web"
                     android:fontFamily="@font/ubunturegular"
                     android:includeFontPadding="false"
-                    android:textSize="@dimen/_13ssp"/>
+                    android:textSize="@dimen/_13ssp" />
 
 
                 <ImageView
@@ -165,11 +165,10 @@
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:src="@drawable/icdelete"
-                    android:tint="@color/colorDelete"/>
+                    android:tint="@color/colorDelete" />
 
 
             </LinearLayout>
-
 
 
             <EditText
@@ -192,14 +191,14 @@
                 android:textColorHint="@color/colortextmint"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutweburl"/>
-
-
+                app:layout_constraintTop_toBottomOf="@id/layoutweburl" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <include layout="@layout/layout_miscellaneous"/>
+    <include
+        layout="@layout/layout_miscellaneous"
+        android:layout_height="325dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                focusintent = new Intent (getApplicationContext (),FocusMode.class);
+                focusintent = new Intent (getApplicationContext (),EntrepreneurNewsActivity.class);
                 startActivity (focusintent);
             }
         });
