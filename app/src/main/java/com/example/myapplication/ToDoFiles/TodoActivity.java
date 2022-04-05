@@ -27,6 +27,7 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
       List<ToDoModel>tasklist;
       DatabaseHandler db;
       FloatingActionButton floatbtn;
+      boolean[]checkboxState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
         db = new DatabaseHandler (this);
         db.openDatabase ();
         tasklist = new ArrayList<> ();
+        checkboxState = new boolean[tasklist.size ()];
 
         recyclerView = findViewById (R.id.recyclev);
         recyclerView.setLayoutManager (new LinearLayoutManager (this));
