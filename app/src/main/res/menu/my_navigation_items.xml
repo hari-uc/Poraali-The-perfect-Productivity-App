@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+
+        android:title="@string/settings"/>
+
+    <item
+        android:id="@+id/devGroup"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="@string/developers"/>
+<!--to add space between each row-->
+        <item
+            android:title=""
+            android:enabled="false" >
+        </item>
+        <item
+            android:title=""
+            android:enabled="false" >
+        </item>
+
+
+
+
+<!--        <item android:title="@string/other">-->
+<!--            <menu>-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_about_us"-->
+<!--                    android:title="@string/about"-->
+<!--                    android:icon="@drawable/ic_info"/>-->
+
+<!--            </menu>-->
+<!--        </item>-->
+
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/drawer_item_settings"
+            android:icon="@drawable/ic_info"
+            android:title="about" >
+        </item>
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:title="@string/privacy_policy"
+            android:icon="@drawable/ic_policy">
+
+        </item>
+    </group>
+
+</menu>
