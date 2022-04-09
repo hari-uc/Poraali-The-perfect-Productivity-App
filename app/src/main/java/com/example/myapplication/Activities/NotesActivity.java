@@ -26,6 +26,8 @@ import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -60,6 +62,9 @@ public class NotesActivity extends AppCompatActivity implements NotesListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_notes);
+//        requestWindowFeature (Window.FEATURE_NO_TITLE);
+//        this.getWindow ().setFlags (WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar ().hide ();
 
         ImageView ImageAddNoteMain = findViewById (R.id.imageaddnotemain);
 
