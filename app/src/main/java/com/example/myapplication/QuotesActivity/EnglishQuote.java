@@ -1,5 +1,7 @@
 package com.example.myapplication.QuotesActivity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class EnglishQuote extends Fragment {
 
+
+
+
+
+
+
     TextView quoteText;
     String BASE_URL = "https://zenquotes.io/api/";
 
@@ -37,18 +46,26 @@ public class EnglishQuote extends Fragment {
         super.onCreate (savedInstanceState);
 
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
         return inflater.inflate (R.layout.fragment_english_quote, container, false);
+
     }
 
 
     public void onViewCreated(@NonNull View view,@NonNull Bundle savedInstanceState){
         super.onViewCreated (view,savedInstanceState);
+        ProgressDialog mProgressDialog = new ProgressDialog(getContext ());
+
+        mProgressDialog.setIndeterminate (true);
+        mProgressDialog.setMessage("Loading...");
+        mProgressDialog.show();
 
         quoteText = getView ().findViewById (R.id.qoutetext);
         quoteText.setText ("");
@@ -68,6 +85,8 @@ public class EnglishQuote extends Fragment {
             @Override
             public void onResponse(Call<List<EnglishQuoteModel>> call, Response<List<EnglishQuoteModel>> response) {
                 List<EnglishQuoteModel> data = response.body ();
+                if (mProgressDialog.isShowing())
+                    mProgressDialog.dismiss();
 
                 for (int i = 0; i < data.size (); i++) {
                     quoteText.append (data.get (i).getquote ());
@@ -77,7 +96,9 @@ public class EnglishQuote extends Fragment {
 
             @Override
             public void onFailure(Call<List<EnglishQuoteModel>> call, Throwable t) {
-                Toast.makeText (getContext (),"failed",Toast.LENGTH_SHORT).show ();
+                if (mProgressDialog.isShowing())
+                    mProgressDialog.dismiss();
+                Toast.makeText (getContext (),"Please Check Your Internet Connection",Toast.LENGTH_SHORT).show ();
             }
         });
     }

@@ -28,7 +28,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
     private List<ToDoModel> todoList;
     private TodoActivity todoActivity;
     private DatabaseHandler db;
-    boolean[] checkBoxState;
+
+
 
 
     public ToDoAdapter(DatabaseHandler db, TodoActivity todoActivity){
@@ -54,11 +55,15 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
         holder.task.setText (item.getTask ());
         holder.task.setChecked (toBoolean (item.getStatus ()));
 
+        if (holder.task.isChecked () == true){
+            holder.task.setPaintFlags (holder.task.getPaintFlags ()| Paint.STRIKE_THRU_TEXT_FLAG);
+
+        }
 
 
         if (position == 0) {
             ObjectAnimator animationLeft = ObjectAnimator.ofFloat(holder.itemView, "translationX", 0f, 80f, 0f, -80f, 0f);
-            animationLeft.setDuration(1500);
+            animationLeft.setDuration(2000);
             animationLeft.start();
         }
 
@@ -118,6 +123,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
         ViewHolder(View view){
             super(view);
             task = view.findViewById (R.id.todo_checkbox);
+            this.setIsRecyclable (false);
+            task.setChecked (false);
         }
     }
 

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 import com.example.myapplication.R;
-import com.example.myapplication.databinding.ActivityMainBinding;
+//import com.example.myapplication.databinding.ActivityMainBinding;
 import com.github.matteobattilana.weather.PrecipType;
 import com.github.matteobattilana.weather.WeatherView;
 

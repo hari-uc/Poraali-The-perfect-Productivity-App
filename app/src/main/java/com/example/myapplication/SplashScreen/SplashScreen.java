@@ -57,7 +57,7 @@ public class SplashScreen extends AppCompatActivity {
         splashimg.setImageResource (ppl_imgs[randomNum.nextInt (ppl_imgs.length-1)]);
 
         Handler handler = new Handler ();
-        handler.postDelayed (this::changeintent,2000);
+        handler.postDelayed (this::changeintent,1500);
     }
 
     public void changeintent(){
