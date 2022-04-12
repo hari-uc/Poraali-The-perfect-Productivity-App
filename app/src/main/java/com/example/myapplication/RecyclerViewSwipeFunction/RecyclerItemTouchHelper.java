@@ -36,6 +36,7 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
             AlertDialog.Builder builder = new AlertDialog.Builder (adapter.getContext ());
             builder.setTitle ("Delete Task");
             builder.setMessage ("Are you want to delete this task? ");
+
             builder.setPositiveButton ("confirm",
                     new DialogInterface.OnClickListener () {
                         @Override
@@ -49,11 +50,22 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
                     adapter.notifyItemChanged (viewHolder.getAdapterPosition ());
                 }
             });
+
             AlertDialog dialog = builder.create ();
             dialog.show ();
+
+//            final AlertDialog dialog1 = builder.show ();
+//            dialog1.setOnShowListener (new DialogInterface.OnShowListener () {
+//                @Override
+//                public void onShow(DialogInterface dialogInterface) {
+//                    dialog1.getButton (AlertDialog.BUTTON_POSITIVE).setTextColor ();
+//                }
+//            });
         }else {
             adapter.editItem (position);
         }
+
+
     }
 
     @Override

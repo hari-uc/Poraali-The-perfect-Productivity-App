@@ -2,24 +2,28 @@ package com.example.myapplication.SplashScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
+import com.example.myapplication.Activities.LoginActivity;
 import com.example.myapplication.Activities.MainActivity;
 import com.example.myapplication.R;
 
 import java.util.Random;
 
 public class SplashScreen extends AppCompatActivity {
-    Intent splash;
+    Intent splash,splash2;
     ImageView splashimg;
     private View decorview;
 
     final Random randomNum= new Random ();
+
 
 
 
@@ -61,9 +65,15 @@ public class SplashScreen extends AppCompatActivity {
     }
 
     public void changeintent(){
-        splash = new Intent (getApplicationContext (), MainActivity.class);
-        startActivity (splash);
-        finish ();
+        if (getSharedPreferences("login",0).getBoolean("isLoginKey",false)){
+            Intent i = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }else{
+            Intent i = new Intent(SplashScreen.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 
 

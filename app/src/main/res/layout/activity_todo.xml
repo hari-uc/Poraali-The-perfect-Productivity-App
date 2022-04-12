@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Tasks"
-        android:textColor="#FDFCFC"
+        android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold" />
 
@@ -37,6 +37,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/bg_color_2"
+        app:backgroundTint="@color/teal_700"
         android:src="@drawable/plus" />
 </RelativeLayout>

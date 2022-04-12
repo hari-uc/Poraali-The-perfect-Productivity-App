@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.EntrepreneurNewsActivity">
+    tools:context=".Activities.EntrepreneurNewsActivity"
+    android:background="@color/bg_color_2">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycelerview"

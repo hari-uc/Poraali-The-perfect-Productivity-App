@@ -18,13 +18,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profilepic"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="@dimen/_50sdp"
         android:layout_marginTop="10dp"
         android:text="UserName"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
