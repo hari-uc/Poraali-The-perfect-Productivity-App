@@ -39,11 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-//        requestWindowFeature (Window.FEATURE_NO_TITLE);
-//        this.getWindow ().setFlags (WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar ().hide ();
         setContentView (R.layout.activity_main);
 
@@ -153,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity (intent1);
                         Toast.makeText (MainActivity.this,"selected settings",Toast.LENGTH_SHORT).show ();break;
                     case R.id.devGroup:
-
-//                        replaceFragment (new MessageFragment ());break;
-                        Toast.makeText(MainActivity.this, "Synch is Clicked",Toast.LENGTH_SHORT).show();break;
+                        Intent intent4 = new Intent (getApplicationContext (), DevelopersActivity.class);
+                        startActivity (intent4);
+                        break;
                     case R.id.nav_about:
                         Intent intent2 = new Intent (getApplicationContext (), AboutUs.class);
                         startActivity (intent2);
@@ -163,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_privacy_policy:
                         Intent intent3 = new Intent (getApplicationContext (), PrivacyPolicyActivity.class);
                         startActivity (intent3);
+                        break;
+
                     default:
                         return true;
 
@@ -177,12 +178,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    private void replaceFragment(Fragment fragment){
-        FragmentManager fragmentManager = getSupportFragmentManager ();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction ();
-        fragmentTransaction.replace (R.id.framelayout,fragment);
-        fragmentTransaction.commit ();
-    }
+//    private void replaceFragment(Fragment fragment){
+//        FragmentManager fragmentManager = getSupportFragmentManager ();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction ();
+//        fragmentTransaction.replace (R.id.framelayout,fragment);
+//        fragmentTransaction.commit ();
+//    }
+
+
 
 
 

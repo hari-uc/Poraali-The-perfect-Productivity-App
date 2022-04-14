@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activities.DevelopersActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.PrivacyPolicyActivity"
             android:exported="false" />
         <activity
@@ -27,7 +30,7 @@
         <activity
             android:name=".Activities.LoginActivity"
             android:exported="false"
-            android:label="loginActivity"/>
+            android:label="loginActivity" />
         <activity
             android:name=".Activities.WebviewActivity"
             android:exported="false"

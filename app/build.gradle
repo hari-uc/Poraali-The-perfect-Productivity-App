@@ -57,6 +57,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.medyo:android-about-page:1.2.5'
     implementation 'androidx.core:core:1.9.0-alpha02'
+    implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
