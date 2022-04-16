@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuotesActivity.QuotesActivity"
-
+    android:orientation="vertical"
     android:background="@color/bg_color_2">
+    <ImageView
+        android:id="@+id/imagebackquotes"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:src="@drawable/ic_leftarrow"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <LinearLayout
         android:id="@+id/linearablove"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".QuotesActivity.QuotesActivity"
         android:layout_centerHorizontal="true"
-        android:background="@color/bg_color_2">
+        android:background="@color/bg_color_2"
+        tools:context=".QuotesActivity.QuotesActivity">
+
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="50dp"
-            android:layout_weight="5">
+            android:layout_weight="5"
+            android:orientation="horizontal">
 
             <RadioButton
 
@@ -68,9 +80,16 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linearablove">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Select Any Language ☝"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
     </FrameLayout>
 
 
 
 
-</RelativeLayout>
+</LinearLayout>

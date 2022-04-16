@@ -7,6 +7,18 @@
     tools:context=".ToDoFiles.TodoActivity"
     android:background="@color/bg_color_2">
 
+    <ImageView
+        android:id="@+id/imagebacktodo"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:src="@drawable/ic_leftarrow"
+        android:tint="@color/coloricon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/todo_heading"
         android:layout_width="wrap_content"
@@ -17,7 +29,8 @@
         android:text="Tasks"
         android:textColor="@color/white"
         android:textSize="34sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/imagebacktodo"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclev"

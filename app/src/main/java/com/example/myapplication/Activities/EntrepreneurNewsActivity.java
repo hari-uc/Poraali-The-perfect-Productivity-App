@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -36,7 +37,7 @@ public class EntrepreneurNewsActivity extends AppCompatActivity {
     private List<Object> viewItems = new ArrayList<>();
 
     private RecyclerView.Adapter mAdapter;
-    private ImageView imageView;
+    private ImageView imageView,backbtn_news;
     private RecyclerView.LayoutManager layoutManager;
 
     private static final String TAG = "EntrepreneurNewsActivity";
@@ -52,6 +53,15 @@ public class EntrepreneurNewsActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycelerview);
         imageView = findViewById (R.id.imageView);
+        backbtn_news = findViewById(R.id.imagebacknews);
+
+        backbtn_news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
 
 
         layoutManager = new LinearLayoutManager(this);

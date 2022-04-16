@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.myapplication.Adapter.ToDoAdapter;
 import com.example.myapplication.Interface.DialogCloseListener;
@@ -27,6 +28,7 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
       List<ToDoModel>tasklist;
       DatabaseHandler db;
       FloatingActionButton floatbtn;
+      ImageView backbtn;
       boolean[]checkboxState;
 
     @Override
@@ -38,6 +40,8 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
         db.openDatabase ();
         tasklist = new ArrayList<> ();
         checkboxState = new boolean[tasklist.size ()];
+
+        backbtn = findViewById(R.id.imagebacktodo);
 
         recyclerView = findViewById (R.id.recyclev);
         recyclerView.setLayoutManager (new LinearLayoutManager (this));
@@ -60,10 +64,14 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
                 AddNewTask.newInstance ().show (getSupportFragmentManager (),AddNewTask.TAG);
             }
 
-
         });
 
-
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
 

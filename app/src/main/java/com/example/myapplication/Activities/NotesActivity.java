@@ -53,6 +53,7 @@ public class NotesActivity extends AppCompatActivity implements NotesListener {
     private RecyclerView notesRecylerView;
     private List<Note> noteList;
     private NotesAdapter notesAdapter;
+    ImageView  back_btn;
 
     private int noteClickedPosition = -1;
 
@@ -67,6 +68,7 @@ public class NotesActivity extends AppCompatActivity implements NotesListener {
         getSupportActionBar ().hide ();
 
         ImageView ImageAddNoteMain = findViewById (R.id.imageaddnotemain);
+        back_btn = findViewById(R.id.imagebacknotes);
 
         ImageAddNoteMain.setOnClickListener (new View.OnClickListener () {
             @Override
@@ -89,6 +91,15 @@ public class NotesActivity extends AppCompatActivity implements NotesListener {
         getNotes (REQUEST_CODE_SHOW_NOTES,false);
 
         EditText inputSearch = findViewById (R.id.inputsearch);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+
         inputSearch.addTextChangedListener (new TextWatcher () {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -299,5 +310,8 @@ public class NotesActivity extends AppCompatActivity implements NotesListener {
             });
         }
         dialogAddUrl.show ();
+
+
+
     }
 }

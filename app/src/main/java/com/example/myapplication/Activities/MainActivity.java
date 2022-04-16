@@ -36,10 +36,6 @@ public class MainActivity extends AppCompatActivity {
     LottieAnimationView lottienews,lottietodo,lottienotes,lottiequotes;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
