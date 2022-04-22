@@ -43,6 +43,7 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             adapter.deleteItem (position);
+                            adapter.notifyDataSetChanged();
                         }
                     });
             builder.setNegativeButton (android.R.string.cancel, new DialogInterface.OnClickListener () {
@@ -101,8 +102,8 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
             background.setBounds (itemView.getLeft (),itemView.getTop (),itemView.getLeft () + ((int)dX)+ backgroundCornerOffset, itemView.getBottom ());
         }
         else if (dX<0){ //swiping left
-            int iconLeft = itemView.getRight () - iconMargin - icon.getIntrinsicWidth ();
-            int iconRight  = itemView.getRight ()- iconMargin;
+            int iconLeft = itemView.getRight () - iconMargin;
+            int iconRight  = itemView.getRight ()- iconMargin-icon.getIntrinsicWidth();
             icon.setBounds (iconLeft,iconTop,iconRight,iconBotton);
 
             background.setBounds (itemView.getRight ()+ ((int)dX) - backgroundCornerOffset,itemView.getTop (),
