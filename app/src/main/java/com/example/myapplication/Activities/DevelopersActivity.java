@@ -1,48 +1,69 @@
 package com.example.myapplication.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.myapplication.Adapter.DevelopersAdapter;
+import com.example.myapplication.Model.DeveloperModel;
 import com.example.myapplication.R;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 import com.wajahatkarim3.easyflipview.EasyFlipView;
 
 public class DevelopersActivity extends AppCompatActivity {
-    EasyFlipView kumarsir,santhoshanna,karthikanna,harikrishnan;
-    TextView harilinkedin;
-    ImageView back_bttn;
+    RecyclerView rv;
+    DevelopersAdapter mainAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_developers);
-        getSupportActionBar ().hide ();
-
-        kumarsir = findViewById (R.id.kumarsir);
-        santhoshanna = findViewById (R.id.santhoshanna);
-        karthikanna = findViewById (R.id.karthikanna);
-        harikrishnan = findViewById (R.id.harikrishnan);
-        back_bttn = findViewById(R.id.imagebackdevelopers);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_developers);
+        getSupportActionBar().hide();
 
 
 
-        harikrishnan.setAutoFlipBack (false);
-        karthikanna.setAutoFlipBack (false);
-        santhoshanna.setAutoFlipBack (false);
-        kumarsir.setAutoFlipBack (false);
+        rv = findViewById(R.id.dev_recycle);
+        rv.setLayoutManager(new LinearLayoutManager(this));
 
-        back_bttn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+
+        FirebaseRecyclerOptions<DeveloperModel> options =
+                new FirebaseRecyclerOptions.Builder<DeveloperModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("teammembers"), DeveloperModel.class)
+                        .build();
+
+
+        mainAdapter = new DevelopersAdapter(options);
+        rv.getRecycledViewPool().clear();
+        mainAdapter.notifyDataSetChanged();
+        rv.setAdapter(mainAdapter);
+
+        rv.setItemAnimator(null);
+
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mainAdapter.startListening();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mainAdapter.stopListening();
+    }
+
 }

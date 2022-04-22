@@ -23,8 +23,8 @@
         android:fontFamily="@font/ubuntumedium"
         android:gravity="center"
         android:includeFontPadding="false"
-        android:text="^ Tools ^"
-        android:textColor="@color/white"
+        android:text="Swipe up for Tools☝️"
+        android:textColor="@color/bg_color_2"
         android:textSize="@dimen/_13ssp" />
 
     <LinearLayout
@@ -51,7 +51,7 @@
                 android:contentDescription="Porali"
                 android:padding="@dimen/_10sdp"
                 android:src="@drawable/ic_done"
-                android:tint="@color/white"/>
+                android:tint="@color/bg_color_2"/>
 
 
         </FrameLayout>
@@ -74,7 +74,7 @@
                 android:contentDescription="Porali"
                 android:padding="@dimen/_10sdp"
 
-                android:tint="@color/white"/>
+                android:tint="@color/bg_color_2"/>
 
 
         </FrameLayout>
@@ -95,7 +95,7 @@
                 android:layout_height="@dimen/_35sdp"
                 android:contentDescription="Porali"
                 android:padding="@dimen/_10sdp"
-                android:tint="@color/white"/>
+                android:tint="@color/bg_color_2"/>
 
 
         </FrameLayout>
@@ -116,7 +116,7 @@
                 android:layout_height="@dimen/_35sdp"
                 android:contentDescription="Porali"
                 android:padding="@dimen/_10sdp"
-                android:tint="@color/white"/>
+                android:tint="@color/bg_color_2"/>
 
 
         </FrameLayout>
@@ -137,7 +137,7 @@
                 android:layout_height="@dimen/_35sdp"
                 android:contentDescription="Porali"
                 android:padding="@dimen/_10sdp"
-                android:tint="@color/white"/>
+                android:tint="@color/bg_color_2"/>
 
 
         </FrameLayout>
@@ -148,7 +148,7 @@
             android:fontFamily="@font/ubuntumedium"
             android:includeFontPadding="false"
             android:text="Pick a Color"
-            android:textColor="@color/white"
+            android:textColor="@color/bg_color_2"
             android:textSize="@dimen/_13ssp"/>
 
 
@@ -166,7 +166,7 @@
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
             android:src="@drawable/ic_imageicon"
-            android:tint="@color/coloricon"/>
+            android:tint="@color/bg_color_2"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -175,7 +175,7 @@
             android:fontFamily="@font/ubuntumedium"
             android:includeFontPadding="false"
             android:text="Add Image"
-            android:textColor="@color/coloricon"
+            android:textColor="@color/bg_color_2"
             android:textSize="@dimen/_12ssp"/>
     </LinearLayout>
 
@@ -194,7 +194,7 @@
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
             android:src="@drawable/ic_link"
-            android:tint="@color/coloricon"/>
+            android:tint="@color/bg_color_2"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -203,7 +203,7 @@
             android:fontFamily="@font/ubuntumedium"
             android:includeFontPadding="false"
             android:text="@string/add_url"
-            android:textColor="@color/coloricon"
+            android:textColor="@color/bg_color_2"
             android:textSize="@dimen/_12ssp"/>
     </LinearLayout>
     

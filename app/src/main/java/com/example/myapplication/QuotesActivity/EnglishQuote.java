@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +15,23 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.myapplication.Interface.ApiInterface;
 import com.example.myapplication.Model.EnglishQuoteModel;
 import com.example.myapplication.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -30,14 +39,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class EnglishQuote extends Fragment {
 
 
-
-
-
-
-
-    TextView quoteText;
-    String BASE_URL = "https://zenquotes.io/api/";
-
+    TextView quoteText,authorText;
+    String BASE_URL = "https://api.quotable.io/random?maxLength=120?tags=inspirational";
 
 
 
@@ -67,40 +70,44 @@ public class EnglishQuote extends Fragment {
         mProgressDialog.setMessage("Loading...");
         mProgressDialog.show();
 
-        quoteText = getView ().findViewById (R.id.qoutetext);
+        quoteText = getView ().findViewById (R.id.jsontxtenglish);
+        authorText = getView().findViewById(R.id.authorname);
         quoteText.setText ("");
+        authorText.setText("");
 
+        RequestQueue requestQueue;
 
-        Retrofit retrofit = new Retrofit.Builder ()
-                .baseUrl (BASE_URL)
-                .addConverterFactory (GsonConverterFactory.create ())
-                .build ();
+        requestQueue = Volley.newRequestQueue(getContext());
 
-
-        ApiInterface apiInterface = retrofit.create (ApiInterface.class);
-
-        Call<List<EnglishQuoteModel>> call = apiInterface.getQuote ();
-
-        call.enqueue (new Callback<List<EnglishQuoteModel>> () {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                BASE_URL, null, new com.android.volley.Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(Call<List<EnglishQuoteModel>> call, Response<List<EnglishQuoteModel>> response) {
-                List<EnglishQuoteModel> data = response.body ();
-                if (mProgressDialog.isShowing())
+            public void onResponse(JSONObject response) {
+                try {
                     mProgressDialog.dismiss();
+                    Log.d("myapp", "the response is " + response.getString("content"));
+//                    Toast.makeText(getApplicationContext(), ""+response.getString("content"), Toast.LENGTH_SHORT).show();
+                    String content = (String) response.getString("content");
+                    String author = (String) response.getString("author");
 
-                for (int i = 0; i < data.size (); i++) {
-                    quoteText.append (data.get (i).getquote ());
+                    quoteText.setText(content);
+                    authorText.setText("-"+author);
 
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            }
 
+            }
+        }, new Response.ErrorListener() {
             @Override
-            public void onFailure(Call<List<EnglishQuoteModel>> call, Throwable t) {
-                if (mProgressDialog.isShowing())
-                    mProgressDialog.dismiss();
-                Toast.makeText (getContext (),"Please Check Your Internet Connection",Toast.LENGTH_SHORT).show ();
+            public void onErrorResponse(VolleyError error) {
+                Log.d("myapp","Something went wrong");
             }
         });
+        requestQueue.add(jsonObjectRequest);
+
+
+
     }
 
 

@@ -20,7 +20,7 @@ public class WebviewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String url = getIntent ().getStringExtra ("url");
+        String url = getIntent ().getStringExtra ("blogURL");
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_webview);
 //        getSupportActionBar ().hide ();

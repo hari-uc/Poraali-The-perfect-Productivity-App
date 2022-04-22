@@ -1,5 +1,6 @@
 package com.example.myapplication.RecyclerViewSwipeFunction;
 
+import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -64,6 +65,7 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
         }else {
             adapter.editItem (position);
         }
+
 
 
     }

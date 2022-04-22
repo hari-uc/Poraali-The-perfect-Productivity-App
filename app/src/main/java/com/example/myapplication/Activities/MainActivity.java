@@ -2,6 +2,8 @@ package com.example.myapplication.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn1,btn2,btn3,btn4;
     TextView textView;
     LottieAnimationView lottienews,lottietodo,lottienotes,lottiequotes;
+    SharedPreferences sharedPreferences;
 
 
     @Override
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById (R.id.navigation_view);
+
 
         btn1 = findViewById (R.id.button1);
         btn2 = findViewById (R.id.button2);
@@ -67,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
         lottiequotes.loop(true);
         lottiequotes.playAnimation ();
+
+        sharedPreferences = getSharedPreferences ("night",0);
+        Boolean booleanvalue = sharedPreferences.getBoolean ("night_mode",false);
+
+        if (booleanvalue){
+            AppCompatDelegate.setDefaultNightMode (AppCompatDelegate.MODE_NIGHT_YES);
+        }
 
 
 
@@ -146,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent1 = new Intent (getApplicationContext (),SettingsActivity.class);
                         intent1.putExtra ("Name",user_nick_name);
                         startActivity (intent1);
-                        Toast.makeText (MainActivity.this,"selected settings",Toast.LENGTH_SHORT).show ();break;
+                        break;
                     case R.id.devGroup:
                         Intent intent4 = new Intent (getApplicationContext (), DevelopersActivity.class);
                         startActivity (intent4);

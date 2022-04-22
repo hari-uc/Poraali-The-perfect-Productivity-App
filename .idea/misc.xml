@@ -67,13 +67,27 @@
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/santhoshanna_layout_front.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/layout/todo_row_template.xml" value="0.1" />
         <entry key="..\:/Users/Hari.000/AndroidStudioProjects/MyApplication5/app/src/main/res/menu/my_navigation_items.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/background_dialog.xml" value="0.298" />
+        <entry key="app/src/main/res/drawable/background_miscellaneous.xml" value="0.298" />
+        <entry key="app/src/main/res/layout-v26/fragment_english_quote.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_create_note.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_developers.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_entrepreneur_news.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_notes.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_quotes.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/activity_todo.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/activity_webview.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/developers_row_template.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_english_quote.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_tamil_quotes.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/harikrishnan_layout_back.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/harikrishnan_layout_front.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_delete_note.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/layout_miscellaneous.xml" value="0.3177083333333333" />
+        <entry key="app/src/main/res/layout/list_items_news_recycler.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/new_task.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/todo_row_template.xml" value="0.3177083333333333" />
       </map>

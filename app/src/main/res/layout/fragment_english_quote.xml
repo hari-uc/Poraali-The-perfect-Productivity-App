@@ -8,18 +8,46 @@
     android:background="@color/bg_color_2"
     tools:context=".QuotesActivity.EnglishQuote">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/qoutetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:text="emplty"
-        android:textAlignment="center"
-        android:textColor="@color/white"
+        <TextView
+            android:id="@+id/jsontxtenglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="quotes"
+            android:autoSizeMinTextSize="@dimen/_20ssp"
+            android:autoSizeMaxTextSize="@dimen/_30ssp"
 
-        android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/authorname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:gravity="end"
+            android:text="author"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/_25ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/jsontxtenglish"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>

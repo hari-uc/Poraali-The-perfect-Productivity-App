@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -57,6 +58,7 @@ public class TodoActivity extends AppCompatActivity implements DialogCloseListen
         tasklist = db.getAllTasks ();
         Collections.reverse (tasklist);
         taskadapter.setTasks (tasklist);
+
 
         floatbtn.setOnClickListener (new View.OnClickListener () {
             @Override

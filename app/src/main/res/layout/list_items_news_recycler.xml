@@ -1,55 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
     android:elevation="4dp"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="8dp">
+    app:cardUseCompatPadding="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/todo_row_template"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="15dp">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="@dimen/_90sdp"
-            android:layout_marginStart="4dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgfb"/>
 
         <TextView
-            android:id="@+id/name"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="47dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="53dp"
+            android:id="@+id/headingfb"
+            android:text="TITLE"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/imgfb"
+            android:layout_marginLeft="15dp"
             android:ellipsize="end"
             android:maxLines="3"
-            android:scrollHorizontally="true"
-            android:text="title goes here"
-            android:textAlignment="gravity"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.687" />
+            android:textAlignment="gravity"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

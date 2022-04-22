@@ -52,11 +52,12 @@ public class LoginActivity extends AppCompatActivity {
                 if (user_text.getText ().toString ().trim ().length () == 0){
                     Toast.makeText (getApplicationContext (),"Please Enter Nick Name",Toast.LENGTH_SHORT).show ();
                 }else if (user_text.getText ().toString ().trim ().length ()>8){
-                    Toast.makeText (getApplicationContext (),"Please Enter Name with 8 Words !",Toast.LENGTH_SHORT).show ();
+                    Toast.makeText (getApplicationContext (),"Please Enter Name with 8 Characters!!",Toast.LENGTH_SHORT).show ();
 
                 }
                 else {
                     onLoginSuccess ();
+                    finish();
                 }
 
 

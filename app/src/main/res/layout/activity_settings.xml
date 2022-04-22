@@ -119,24 +119,25 @@
                         android:tint="@color/white"/>
 
                     <TextView
-                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/editname"
                         android:text="Edit Nick Name"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:layout_toEndOf="@id/editname"/>
+                        android:textStyle="bold" />
 
 
                     <ImageView
+                        android:id="@+id/nicknameedit"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:padding="12dp"
-                        android:tint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
+                        android:src="@drawable/ic_right_arrow"
+                        android:tint="@color/white" />
 
                 </RelativeLayout>
 

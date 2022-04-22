@@ -1,103 +1,103 @@
 package com.example.myapplication.Adapter;
 
-import android.content.Context;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.Activities.WebviewActivity;
 import com.example.myapplication.Model.NewsModel;
 import com.example.myapplication.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import java.util.List;
 
-public class WebviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private static final int TYPE = 1;
-    private final Context context;
-    private final List<Object> listRecyclerItem;
-    private ItemClickListener mitemclickListener;
+public class WebviewAdapter extends FirebaseRecyclerAdapter<NewsModel,WebviewAdapter.myViewHolder> {
 
-    public WebviewAdapter(Context context, List<Object> listRecyclerItem, ItemClickListener itemClickListener) {
-        this.context = context;
-        this.listRecyclerItem = listRecyclerItem;
-        this.mitemclickListener  = itemClickListener;
+
+
+    /**
+     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
+     * {@link FirebaseRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public WebviewAdapter(@NonNull FirebaseRecyclerOptions<NewsModel> options) {
+        super(options);
     }
 
+    @Override
+    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull NewsModel model) {
+        holder.titletxt.setText(model.getTitle());
 
-    public class ItemViewHolder extends RecyclerView.ViewHolder {
+        Glide.with(holder.img.getContext())
+                .load(model.getImg())
+                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+                .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
+                .into(holder.img);
 
-        private TextView name;
-        private ImageView img;
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String clickurl = model.getUrl();
+                Intent intent = new Intent(view.getContext(), WebviewActivity.class);
+                intent.putExtra("blogURL",clickurl);
+                holder.itemView.getContext().startActivity(intent);
+//                Toast.makeText(view.getContext(), ""+clickurl, Toast.LENGTH_SHORT).show();
 
 
-        public ItemViewHolder(@NonNull View itemView) {
-            super(itemView);
-            name = (TextView) itemView.findViewById(R.id.name);
-            img = (ImageView) itemView.findViewById (R.id.imageView);
+            }
+        });
 
-        }
+
+
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        switch (i) {
-            case TYPE:
-
-            default:
-
-                View layoutView = LayoutInflater.from(viewGroup.getContext()).inflate(
-                        R.layout.list_items_news_recycler, viewGroup, false);
-
-                return new ItemViewHolder((layoutView));
-        }
-
+    public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items_news_recycler,parent,false);
+        return new myViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+    class myViewHolder extends RecyclerView.ViewHolder{
+        ImageView img;
+        TextView titletxt;
 
-        int viewType = getItemViewType(i);
+        public myViewHolder(@NonNull View itemView) {
+            super(itemView);
 
+            img = (ImageView) itemView.findViewById(R.id.imgfb);
+            titletxt = (TextView) itemView.findViewById(R.id.headingfb);
 
-        switch (viewType) {
-            case TYPE:
-            default:
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    Toast.makeText(view.getContext(),""+position,Toast.LENGTH_SHORT).show();
 
-                ItemViewHolder itemViewHolder = (ItemViewHolder) viewHolder;
-                NewsModel news = (NewsModel) listRecyclerItem.get(i);
-                itemViewHolder.name.setText(news.getTitle ());
-//                Picasso.get ().load (((News) listRecyclerItem.get (i)).getImg ()).into (((ItemViewHolder) viewHolder).img);
-
-                Glide.with (context)
-                        .load (((NewsModel) listRecyclerItem.get (i)).getImg ())
-                        .into (((ItemViewHolder) viewHolder).img);
-
-//                to find position of itemclicked
-                viewHolder.itemView.setOnClickListener (view -> {
-
-
-                    mitemclickListener.onItemClick ((NewsModel) listRecyclerItem.get (i));
-                });
+                }
+            });
         }
-
     }
 
     @Override
     public int getItemCount() {
-        return listRecyclerItem.size();
+        return super.getItemCount();
     }
 
-//    recyclerview itemclick
 
-    public interface ItemClickListener{
-        void onItemClick(NewsModel news);
-    }
 
 }
+
+
+

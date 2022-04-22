@@ -169,14 +169,15 @@ public class CreateNoteActivity extends AppCompatActivity {
 
 
     private void saveNote(){
-        if (inputNoteTitle.getText ().toString ().trim ().isEmpty ()){
-            Toast.makeText (this,"Note Title Can't be Empty",Toast.LENGTH_SHORT).show ();
-            return;
-        }else if(inputNoteSubtitle.getText ().toString ().trim ().isEmpty ()
-        && inputNoteText.getText ().toString ().trim ().isEmpty ()){
-            Toast.makeText (this,"Note Can't be Empty",Toast.LENGTH_SHORT).show ();
+        if (inputNoteTitle.getText ().toString ().trim ().isEmpty ()) {
+            Toast.makeText(this, "Note Title Can't be Empty", Toast.LENGTH_SHORT).show();
             return;
         }
+//        }else if(inputNoteSubtitle.getText ().toString ().trim ().isEmpty ()
+//        && inputNoteText.getText ().toString ().trim ().isEmpty ()){
+//            Toast.makeText (this,"Note Can't be Empty",Toast.LENGTH_SHORT).show ();
+//            return;
+//        }
 
         final Note note = new Note();
         note.setTitle (inputNoteTitle.getText ().toString ());

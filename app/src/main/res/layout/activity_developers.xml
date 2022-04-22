@@ -1,108 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activities.DevelopersActivity">
+    tools:context=".Activities.DevelopersActivity"
+    android:id="@+id/devlayout">
 
-    <ImageView
-        android:id="@+id/imagebackdevelopers"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_6sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_12sdp"
-        android:src="@drawable/ic_leftarrow"
-        android:tint="@color/white"
+    <TextView
+        android:id="@+id/teaamheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Team"
+        android:textSize="@dimen/_20ssp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        app:layout_constraintRight_toRightOf="@id/devlayout"
+        app:layout_constraintLeft_toLeftOf="@id/devlayout"
+        app:layout_constraintBottom_toTopOf="@id/dev_recycle"
+        app:layout_constraintTop_toTopOf="@id/devlayout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dev_recycle"
+        android:layout_width="405dp"
+        android:layout_height="667dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
-<!--kumar sir flipview-->
-    <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/kumarsir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipType="vertical"
-        app:flipFrom="front"
-        app:autoFlipBack="true"
-        app:autoFlipBackTime="1000">
-
-        <!-- Back Layout Goes Here -->
-        <include layout="@layout/kumarsir_layout_back"/>
-
-        <!-- Front Layout Goes Here -->
-        <include layout="@layout/kumarsir_layout_front"/>
-
-    </com.wajahatkarim3.easyflipview.EasyFlipView>
-
-    <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/santhoshanna"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipType="vertical"
-        app:flipFrom="front"
-        app:autoFlipBack="true"
-        app:autoFlipBackTime="1000"
-        >
-
-        <!-- Back Layout Goes Here -->
-        <include layout="@layout/santhoshanna_layout_back"/>
-
-        <!-- Front Layout Goes Here -->
-        <include layout="@layout/santhoshanna_layout_front"/>
-
-    </com.wajahatkarim3.easyflipview.EasyFlipView>
-
-    <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/karthikanna"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipType="vertical"
-        app:flipFrom="front"
-        app:autoFlipBack="true"
-        app:autoFlipBackTime="1000"
-        >
-
-        <!-- Back Layout Goes Here -->
-        <include layout="@layout/karthickanna_layout_back"/>
-
-        <!-- Front Layout Goes Here -->
-        <include layout="@layout/karthickanna_layout_front"/>
-
-    </com.wajahatkarim3.easyflipview.EasyFlipView>
-
-    <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:id="@+id/harikrishnan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipType="vertical"
-        app:flipFrom="front"
-        app:autoFlipBack="true"
-        app:autoFlipBackTime="1000"
-        >
-
-        <!-- Back Layout Goes Here -->
-        <include layout="@layout/harikrishnan_layout_back"/>
-
-        <!-- Front Layout Goes Here -->
-        <include layout="@layout/harikrishnan_layout_front"/>
-
-    </com.wajahatkarim3.easyflipview.EasyFlipView>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
