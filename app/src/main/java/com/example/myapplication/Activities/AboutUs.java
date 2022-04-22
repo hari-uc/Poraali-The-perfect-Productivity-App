@@ -30,9 +30,9 @@ public class AboutUs extends AppCompatActivity {
                 .addItem(new Element().setTitle("Version 1.0"))
                 .addGroup("CONNECT WITH US!")
                 .addEmail("Hariuc2001@gmail.com")
-                .addWebsite("Your website/")
+                .addWebsite("https://hari-uc.github.io/Poraali-Website/")
                 .addYoutube("UCnMfAVuY5C54ErO2RTE9Dog")   //Enter your youtube link here (replace with my channel link)
-                .addPlayStore("com.example.yourprojectname")   //Replace all this with your package name
+                .addPlayStore("com.example.poraali")   //Replace all this with your package name
                 .addInstagram("harikrishnan_uc")    //Your instagram id
                 .addItem(createCopyright())
                 .create();
