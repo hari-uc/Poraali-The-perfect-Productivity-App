@@ -20,13 +20,13 @@
 
 
             <CheckBox
-                android:textColor="@color/white"
                 android:id="@+id/todo_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/colorprimary"
                 android:paddingStart="8dp"
-                android:text="this is a sample task written for testing" />
+                android:text="this is a sample task written for testing"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 

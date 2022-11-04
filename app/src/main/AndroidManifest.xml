@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.hari.poraali">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,54 +16,54 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Activities.DevelopersActivity"
+            android:name="com.hari.poraali.Activities.DevelopersActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.PrivacyPolicyActivity"
+            android:name="com.hari.poraali.Activities.PrivacyPolicyActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.AboutUs"
+            android:name="com.hari.poraali.Activities.AboutUs"
             android:exported="false" />
         <activity
-            android:name=".Activities.SettingsActivity"
+            android:name="com.hari.poraali.Activities.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name="com.hari.poraali.Activities.LoginActivity"
             android:exported="false"
             android:label="loginActivity" />
         <activity
-            android:name=".Activities.WebviewActivity"
+            android:name="com.hari.poraali.Activities.WebviewActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activities.EntrepreneurNewsActivity"
+            android:name="com.hari.poraali.Activities.EntrepreneurNewsActivity"
             android:configChanges="screenSize|orientation"
             android:exported="false" />
         <activity
-            android:name=".Activities.CreateNoteActivity"
+            android:name="com.hari.poraali.Activities.CreateNoteActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Activities.NotesActivity"
+            android:name="com.hari.poraali.Activities.NotesActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
 
         <activity
-            android:name=".QuotesActivity.QuotesActivity"
+            android:name="com.hari.poraali.QuotesActivity.QuotesActivity"
             android:exported="false"
             android:label="Quote" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name="com.hari.poraali.Activities.MainActivity"
             android:exported="false"
             android:label="Home" />
         <activity
-            android:name=".ToDoFiles.TodoActivity"
+            android:name="com.hari.poraali.ToDoFiles.TodoActivity"
             android:exported="false"
             android:label="TODO" />
         <activity
-            android:name=".SplashScreen.SplashScreen"
+            android:name="com.hari.poraali.SplashScreen.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
